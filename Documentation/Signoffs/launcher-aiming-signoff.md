@@ -11,15 +11,15 @@ a 1x1x1 foot box before powering on.
 * Aiming speed will be calculated from worst-case torque requirements provided by the Mechanical Engineering group
 ## Buildable Schematics
 ### Electrical Scheamtic
-![alt text](image.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming/Documentation/Electrical/Schematics/image.png)
 The electrical shematic shows the connections between the microcontroller [1], turntable motor driver [2], turntable motor [3], launch angle motor driver [4], and launch angle motor[5]. The microcontroller - Rasperry Pi 5, was chosen due to it having all the needed pins to drive the stepper motors while having ample processing power for the head-on sensing subsystem. The motors chosen was due to the torque requirements needed to move the launcher based on the launcher's weight and moment of inertia. The motor drivers were recomended by the site to control the motors based on the the motors' current rating.
 ## Analysis
 ### Aiming time
 The Mechanical Engineering group requried 0.68 Nm of torque from the turntable motor to reach a time to move 180 degrees in 1 second. The selected motor's torque has a maximum torque of 0.73 Nm shown in the graph below obtained from the datasheet amps which satisfies the Mechanical Engineering group's torque requirement.
-![alt text](image-3.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming/Documentation/Images/image-3.png)
 
-For the launch angle motor, the Mechanical Engineers required 0.013 Nm of torque to move the launcher's pitch. The selected motor for should provide ample torque with a maximum torque of 0.14 Nm at 0.6 A shown in the graph below obtained from the datasheet.
-![alt text](image-4.png)
+For the launch angle motor, the Mechanical Engineers required 0.013 Nm of torque to move the launcher's pitch. The selected motor for should provide ample torque with a maximum torque of 140 g-cm or 0.014 Nm at 0.6 A shown in the graph below obtained from the datasheet.
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming/Documentation/Images/image-4.png)
 ### Precision
 Both stepper motors have a 1.8  degree step angle. Both drivers have capablility to have different step resolutions, including 1/2, 1/4, 1/8 steps. If selected to 1/4 step mode, the motors will have a precision of 0.45 degrees. This is within the requirement the launcher aiming having a precision of half a degree in both motors.
 ### Motor Power Requirements
