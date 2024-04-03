@@ -11,7 +11,7 @@ a 1x1x1 foot box before powering on.
 * Aiming speed will be calculated from worst-case torque requirements provided by the Mechanical Engineering group
 ## Buildable Schematics
 ### Electrical Scheamtic
-![alt text](image-1.png)
+![alt text](image.png)
 The electrical shematic shows the connections between the microcontroller [1], turntable motor driver [2], turntable motor [3], launch angle motor driver [4], and launch angle motor[5]. The microcontroller - Rasperry Pi 5, was chosen due to it having all the needed pins to drive the stepper motors while having ample processing power for the head-on sensing subsystem. The motors chosen was due to the torque requirements needed to move the launcher based on the launcher's weight and moment of inertia. The motor drivers were recomended by the site to control the motors based on the the motors' current rating.
 ## Analysis
 ### Aiming time
@@ -21,8 +21,9 @@ The Mechanical Engineering group requried 0.68 Nm of torque from the turntable m
 For the launch angle motor, the Mechanical Engineers required 0.013 Nm of torque to move the launcher's pitch. The selected motor for should provide ample torque with a maximum torque of 0.14 Nm at 0.6 A shown in the graph below obtained from the datasheet.
 ![alt text](image-4.png)
 ### Precision
-Both stepper motors have a 1.8  degree step angle. Both drivers have capablility to have different step resolutions, including 1/2, 1/4, 1/8 steps. If selected to 1/4 step mode, the motors will have a precision of 0.45 degrees. This is within the requirement the launcher aiming having a precision of 1 degrees in both directions
-
+Both stepper motors have a 1.8  degree step angle. Both drivers have capablility to have different step resolutions, including 1/2, 1/4, 1/8 steps. If selected to 1/4 step mode, the motors will have a precision of 0.45 degrees. This is within the requirement the launcher aiming having a precision of half a degree in both motors.
+### Motor Power Requirements
+The turntable stepper motor requires 2.8 A of current to be driven. The driver for the turntable motor is rated for up to 4 A and has a SPI interface that controls the current limit programmatically. The launch angle stepper motor requires 0.6 A of current to be driven. The driver chosen is rated to supply up to 2 A of current which should be sufficient to power the motor. The current limit can be ajdusted by a potentiometer on the driver board and will need to be calibrated to reach the desired current output of 0.6 A. 
 ## BOM
 | Name of Item   | Description                                                                  | Part Number     | Manufacturer     | Quantity     | Price      | Total   |
 |----------------|------------------------------------------------------------------------------|-----------------|------------------|--------------|------------|---------|
