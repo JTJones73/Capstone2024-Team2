@@ -15,17 +15,17 @@ For C20, the precision of the actuators needs to be taken into account because t
 
 ## Buildable Schematics
 ### Electrical Scheamtic
-![alt text](image.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming-Subsystem-Signoff/Documentation/Electrical/Schematics/image-2.png)
 The electrical shematic shows the connections between the microcontroller [1], turntable motor driver [2], turntable motor [3], launch angle motor driver [4], and launch angle motor[5]. The microcontroller - Rasperry Pi 5, was chosen due to it having all the needed pins to drive the stepper motors while having ample processing power for the head-on sensing subsystem. The motors chosen was due to the torque requirements needed to move the launcher based on the launcher's weight and moment of inertia. The motor drivers were recomended by the site to control the motors based on the the motors' current rating.
 ## Analysis
 ### Aiming Speed
 For the turntable motor, it is expected that the launcher starting yaw angle will be perpendicular to the a-frame of the game board. It was determined that the largest yaw angle that the launcher would make from the starting angle would be 62 degrees assuming that the minimum launch distance would be 12 inches from the farthest fishing line from the interceptor. The motor chosen for the turn table is a NEMA 23 class motor mounted directly to the turntable. The NEMA 23 class motors have a recomended maximum operating speed of 500 rpm. To move 62 degrees at 500 rpm would take 0.02 s, well below the time needed to meet C21. For the launch angle motor, it was determined that the minimum angle from the ground that the launcher would fire from would be around 10 degrees and the maximum angle would be around 60 degrees to have a range from 12-36 inches from the middle of the blue square. The launcher itself would sit in the middle of this range at 35 degrees from the ground. Making the maximum vertical angle that the launcher would need to move to be around 25 degrees. The launch angle motor is attached to a pulley system that has a ratio of 3:2 meaning that the launch angle motor would have to move 37.5 degrees in order to move the launcher 25 degrees. The motor selcted is a NEMA 8 class motor. The recommended maximum operating speed for this class motor is around 600 rpm. To move 37.5 degrees, it would take the motor 0.01 s, which meets the C21.
 ### Torque Requirements
 The Mechanical Engineering group requried 0.68 Nm of torque from the turntable motor to reach a time to move 180 degrees in 1 second. The selected motor's torque has a maximum torque of 0.73 Nm shown in the graph below obtained from the datasheet amps which satisfies the Mechanical Engineering group's torque requirement.
-![alt text](image-3.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming/Documentation/Images/image-3.png)
 
 For the launch angle motor, the Mechanical Engineers required 0.013 Nm of torque to move the launcher's pitch. The selected motor for should provide ample torque with a maximum torque of 0.14 Nm at 0.6 A shown in the graph below obtained from the datasheet.
-![alt text](image-4.png)
+![alt text](https://github.com/JTJones73/Capstone2024-Team2/blob/cjdrake42-Launcher-Aiming/Documentation/Images/image-4.png)
 ### Precision
 Both stepper motors have a 1.8  degree step angle. Both drivers have capablility to have different step resolutions, including 1/2, 1/4, 1/8 steps. If selected to 1/4 step mode, the motors will have a precision of 0.45 degrees. The turntable motor will be directly connected to the turntable giving the turntable angle a precision of 0.45 degrees. The launch angle motor is connected to a pulley system with a ration of 3:2 yeilding a precision of 0.3 degrees for the pitch angle This is within the requirement the launcher aiming having a precision of 0.6 degrees in both motors.
 ### Motor Power Requirements
@@ -50,3 +50,5 @@ The turntable stepper motor requires 2.8 A of current to be driven. The driver f
 [4] Launch Angle Motor Driver https://www.pololu.com/product/2134
 
 [5] Launch Angle Motor https://www.pololu.com/product/1204
+
+[6] Stepper Motor Speed https://www.omc-stepperonline.com/support/what-is-the-maximum-speed-highest-frequency-of-the-stepper-motor
