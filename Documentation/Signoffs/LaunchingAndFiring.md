@@ -8,10 +8,9 @@ The Launching and Firing subsystem is the system that will fire the intercepting
 | 2. | Fire without human interaction | The Launching and Firing subsystem shall fire without any human interaction with the field of play or the launching apparatus itself | DEVCOM competition rulebook |
 | 3. | Fit within a cubic foot of space | The Launching and Firing subsystem is required to fit within a cubic foot of space (1 ft by 1 ft by 1 ft) along with the other subsystems that will be placed within that space | DEVCOM competition rulebook |
 | 4. | Safe operating | The Launching and Firing subsystem shall comply with the DEVCOM safety constaints given in the DEVCOM rulebook | DEVCOM competition rulebook |
-| 5. | Motor Shaft Type | The Launching and Firing subsyetm shall use a motor that has an X type output shaft. | Mechanical Engineering Team Specification |
-| 6. | Motor Torque | The Launching and Firing Mechanism shall operate firing mechanism on the launcher apparatus | Mechanical Engineering Team Specification |
-| 7. |  Signal-to-Fire delay | The Launching and Firing subsystem shall fire a round within XX ms after receiving the signal from the aiming subsystem. This is the amount of time left after accounting for all other subsystems to complete their processes during the worst case scenario. | Team Specification |
-| 8. | Preloading after firing | The Launching and Firing subsystem will reset the preload condition after each round is fired. | Team Specification | 
+| 5. | Motor Torque | The Launching and Firing Mechanism shall operate firing mechanism on the launcher apparatus | Mechanical Engineering Team Specification |
+| 6. |  Signal-to-Fire delay | The Launching and Firing subsystem shall fire a round within XX ms after receiving the signal from the aiming subsystem. This is the amount of time left after accounting for all other subsystems to complete their processes during the worst case scenario. | Team Specification |
+| 7. | Preloading after firing | The Launching and Firing subsystem will reset the preload condition after each round is fired. | Team Specification | 
 
 
 ## Buildable Schematic
@@ -33,16 +32,13 @@ The Launching and Firing subsystem is required to fit within a cubic foot of spa
 Safety
 
 **Constraint Solution 5:**
-The Launching and Firing subsystem shall use the xxxx DC motor which has an xxxx shaft which will make it an appropriate choice for the mechanical engineering team's current designs. 
-
-**Constraint Solution 6:**
 The Launching and Firing subsystem shall use the xxxx DC motor which exhibits the ability to operate the mechanism at a torque of xxxx N-m at xx RPM. XXX N-m is the highest torque required to operate the Fire-Preload sequence of the Launching and Firing subsystem.
 
-**Constraint Solution 7:**
+**Constraint Solution 6:**
 The mechanical engineering team's current plan is to fire a round after a 20 degree rotation of the Launching and Firing DC motor. The rest of the rotation would be used to set the firing mechanism into a preload state, awaiting another signal from the aiming subsystem to fire the next round with a 20 degree turn and the following 340 degrees used to preload the mechanism and so on. The electrical engineering team decided to use a safety designing factor of 2.0 and ensure the motor would have the ability to rotate 40 degrees to release the shot within the time allowed for the response of shooting a round after receiving the signal from the aiming subsystem. Over the cycle of a full rotation, thw torque will vary from no-load to a load of xxx N-m from the mechanical engineering team's calculations. However, the first part of the rotation (which will fire the round) will have the highest torque. The xxxx motor has a torque of xxxx N-m at xxxx RPM, which is equivalent to xxx rotations per second.
 This motor will be able to complete 40 degrees of the rotation and release a single round after xxx ms at the given torque of xxx N-m which is within it's worst-case scenario time limit. 
 
-**Constraint Solution 8:**
+**Constraint Solution 7:**
 The mechanical engineering team's current plan is to fire a round after a 20 degree rotation of the Launching and Firing DC motor. The rest of the rotation would be used to set the firing mechanism into a preload state, awaiting another signal from the aiming subsystem to fire the next round with a 20 degree turn and the following 340 degrees used to preload the mechanism and so on. Over the cycle of a full rotation, thw torque will vary from no-load to a load of xxx N-m from the mechanical engineering team's calculations. However, the preload portion of the rotation will require a torque ranging from 0 N-m (no-load) to xxx N-m. The xxxx motor has a torque of xxxx N-m at xxxx RPM, which is equivalent to xxx rotations per second. This motor will be able to complete 340 degrees of the rotation and preload a single round after xxx ms at the given torque of xxx N-m which is faster than the time required for the rest of the subsystems to detect and aim at the next incoming projectile meaning that this work can be done concurrently to the rest of the system's processes without causing a time constraint on the system as a whole. 
 
 
@@ -52,5 +48,5 @@ The mechanical engineering team's current plan is to fire a round after a 20 deg
 | Motor | TBD  | N/A | TBD | 1 | $ | $ |
 | Wiring needed? | Wires | N/A | 	TBD | 1 | $ | $ |
 | Power Relay FeatherWing | Takes the signal from the aiming subsystem and allows DC motor to operate or not | 3191 | Adafruit  | 1 | $9.95 | $9.95 |
-|      |                                             |     |             |   |       | $ Total |
+|      |                                             |     |             |   |       | $29.95 Total |
 
