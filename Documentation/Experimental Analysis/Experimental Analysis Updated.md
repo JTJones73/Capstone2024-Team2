@@ -78,6 +78,8 @@ Test Results:
 | 14 | Yes | Yes | Yes |
 | 15 | Yes | Yes | Yes |
 
+[Video][def1]
+
 To verify that constraints 1 and 3 are met by the system, the Velocity and Acceleration sensor will be powered by a 3.7V LiPo battery and will be set up and have the same placement as in the previous test. To ensure the system is capable of operating without outside intervention and running on battery power the following test will be conducted. After the sensor is set up as previously described a ball will be dropped on line 1 to verify that the sensor will turn to the line to obtain the distance and time measurements and transmit this information to the interceptor. This will prove that the system is capable of operating without outside interaction and running on battery power.
 
 Expected Results: 
@@ -123,6 +125,8 @@ Results:
 https://youtube.com/shorts/PYR-_0FZ6-E?feature=share
 
 When the test signal was sent the motor activated autonomously and stopped when the timing piece was in line with the prox sensor. Furhter testing and tuning (such as moving the timing piece slightly) may need to be done to ensure the design works properly once we are able to have the load from the remaining pieces from the firing mechanism mounted to the rest of the design, hence changing the load put upon the motor once the ME team has completed that piece. 
+
+[def1]: https://youtu.be/kAdy6xZ5rTo
 
 
 
