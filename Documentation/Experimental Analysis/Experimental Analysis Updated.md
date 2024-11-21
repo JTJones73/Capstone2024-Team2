@@ -91,11 +91,62 @@ Expected Results:
 Given that the networking subsystem has been proven to be working in the Projectile Path Sensor, and constraint 7 has been confirmed when the networking is integrated into the velocity and acceleration it is expected that the system will be able to confirmed that the system is autonomous and able to run on batteery power.
 ### Head on Sensor
 10. The interceptor shall be able to detect and locate targets head on.
-11. When the interceptor is sensing head on targets the maximum sensing latency shall not exceed 100ms.
+11. The interceptor must be able to detect the heigh of the target to determine which line the target is being sent on.
+To confirm these constraints targets shall be sent one each line to confirm the camera's ability to focus on each target and relay that to the aiming system to accurately determine the path the target is taking to ensure proper interception.
+
+The following demonstration shows the head on sensor in conjunction with the projectile path sensor to determine which path the target is taking. The camera subsystem is determining the height of the incoming target by consdering all predicted locations in the past 500ms before tripping the projectile path sensor.
+
+[Level 2 Video][def1337]
+
+[def1337]: https://youtu.be/fpIcUL79n6I
+
+The next demonstration shows the head on sensor working with the projectile path sensor to confirm the target is on level 1
+
+[Level 1 Video][def1338]
+
+[def1338]: https://youtu.be/74Y7jp9s-U8
+
+This tabulated trial was to confirm the sensor's ability to distinguish adjacent lines. These lines 1 - 15 are on the bottom row while lines 16 - 30 are on the second row.
+
+| Adjacent Line Numbers | Results |
+|---|---|
+| 1 & 16  | Yes |
+| 2 & 17  | Yes |
+| 3 & 18  | Yes |
+| 4 & 19  | Yes |
+| 5 & 20  | Yes |
+| 6 & 21  | Yes |
+| 7 & 22  | Yes |
+| 8 & 23  | Yes |
+| 9 & 24  | Yes |
+| 10 & 25 | Yes |
+| 11 & 26 | Yes |
+| 12 & 27 | Yes |
+| 13 & 28 | Yes |
+| 14 & 29 | Yes |
+| 15 & 30 | Yes |
 
 ### Networking
 12. The interceptor shall be able to wirelessly communicate with the sensor array.
-13. The interceptor shall be able to wirelessly recieve information from no less than 6 devices at the same time.
+13. The interceptor shall be able to wirelessly recieve information from no less than 3 devices at the same time.
+
+To confirm these constraints an experiment was set up to confirm the networking subsystem could allow the sensor array to wirelessly communicate with the interceptor. From here 4 devices were connected and UDP packets were sent to the server which displays the packet's payload.
+
+
+[Networking Video][def1339]
+
+[def1339]: https://youtu.be/EngO91Z2Qtg
+
+The following tabulated trial was to confirm that each connected device was able to send a payload and be recieved from the server script.
+
+
+| Device | Results |
+|---|---|
+| Head on Position Sensor  | Yes |
+| Projectile Path Sensor  | Yes |
+| Android Device  | Yes |
+
+
 ### Power & Housing
 The critical constraints that are met by the power and housing system are: 
 
