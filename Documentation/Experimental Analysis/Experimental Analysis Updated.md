@@ -166,7 +166,47 @@ The system critical constraints that are met by the aiming system are:
 8. The interceptor shall move into aiming position based on input gathered from sensor data.
 9. The interceptor shall move into aiming position before the projectile moves away from the interceptor's range
 
-To verify that these constraints are met by the system, the main aiming control unit will be powered and recieve data from the raspberry pi usb port and with no external interaction. To simulate position data being sent, the user will input the position data manually and show where the aiming system moves based on that input. This then will be timed based on the greatest number of steps that the aiming motors took to move into position and calulate the aiming duration based on the step speed of the motors. 
+To verify that these constraints are met by the system, the main aiming control unit will be powered and recieve data from the raspberry pi usb port and with no external interaction. To simulate position data being sent, the user will input the position data manually and show where the aiming system moves based on that input. This then will be timed based on the greatest number of steps that the aiming motors took to move into position and calulate the aiming duration based on the step speed of the motors.
+
+To test the ability of the aiming motors to move into position the motors were fed various position data and the motor position was recorded
+Results:
+
+|Position Number|Expected Turntable Position (deg)|Expected Vertical Position(deg)|Actual Turntable Posistion (deg)|Actual Vertical Motor Position(deg)|
+|--------|--------|--------|--------|--------|
+|2|25.89 |30.22|25|30|
+|8|0|32.025|0|32|
+|15|-29.19|30.22|-25|30|
+|17|25.89 |34.994|25|35|
+|23|0|37.01|0|37|
+|30|-29.19|34.994|-29|35|
+
+To test the aiming motor moving into position in time for launcher to intercept, the motor will be timed to make 1 full revolution. This because to time to move the motors with the maximum aiming angles is too fast for human recation time to measure with a timer. Given that the motor speed is constant, the data can be extrapolated in order to find the time it takes to move to the maximum aiming angle.
+
+Results:
+
+Turntable Motor:
+|Trial|Time for 1 revolution (s)|Extrapolated time to move 29.12 deg (s)|
+|-----|-----|-----|
+|1|1.16|0.0938|
+|2|1.26|0.0102|
+|3|1.10|0.089|
+
+Vertical Motor:
+|Trial|Time for 1 revolution (s)|Extrapolated time to move 37.01 deg (s)|
+|-----|-----|-----|
+|1|1.09|0.112|
+|2|1.20|0.123|
+|3|1.18|0.121|
+
+Analysis of Results
+Based on the expirimental data, it was determined that the motors are able to move into aiming position based on an input given from the raspberry pi. To verfify that the aiming motors can move in the appropriate time, the maximum time to move aiming motors was calculated. It was determined that the maximum aiming time was 0.322 seconds. For more information on how this value was calculated, please check out the launcher aiming signoff markdown file. The maximum time that either of the motors took to move into their respected aiming position was 0.123 seconds, well within the limit that was calculated.
+
+[Demonstration Video][def1401]
+
+[def1401]: https://youtube.com/shorts/hzVokNWga-w?si=JqzkcNU0c1pzbCpz
+
+
+
 ### Firing
 
 The system critical constraints that are met by the firing system are:
