@@ -60,6 +60,8 @@ To verify that the constraint 7 is met by the system, the Velocity and Accelerat
 
 Test Results:
 
+With the results from this test shown in the table below it has been confirmed that the system meets critical constraint 7. This data shows that the system was able to successfully detect, measure the distance, and take a timestamp of the golf ball at several points on every line the golfball can travel on. The system meets the base requirements for this constraint but there could be inprovements made on the accuracy and prevention of false detections.
+
 | Line Number | Projectile Detected & Time Recorded Point 1 | Projectile Detected & Time Recorded Point 2 | Projectile Detected & Time Recorded Point 3 |
 |---|---|---|---|
 | 1  | Yes | Yes | Yes |
@@ -79,11 +81,12 @@ Test Results:
 | 15 | Yes | Yes | Yes |
 
 [Video][def1]
+[def1]: https://youtu.be/kAdy6xZ5rTo
 
 To verify that constraints 1 and 3 are met by the system, the Velocity and Acceleration sensor will be powered by a 3.7V LiPo battery and will be set up and have the same placement as in the previous test. To ensure the system is capable of operating without outside intervention and running on battery power the following test will be conducted. After the sensor is set up as previously described a ball will be dropped on line 1 to verify that the sensor will turn to the line to obtain the distance and time measurements and transmit this information to the interceptor. This will prove that the system is capable of operating without outside interaction and running on battery power.
 
 Expected Results: 
-Given that the networking subsystem has been proven to be working in the Projectile Path Sensor, the Velocity and Acceleration Sensor will meet constraints 1 and 3.
+Given that the networking subsystem has been proven to be working in the Projectile Path Sensor, and constraint 7 has been confirmed when the networking is integrated into the velocity and acceleration it is expected that the system will be able to confirmed that the system is autonomous and able to run on batteery power.
 ### Head on Sensor
 10. The interceptor shall be able to detect and locate targets head on.
 11. When the interceptor is sensing head on targets the maximum sensing latency shall not exceed 100ms.
@@ -125,10 +128,3 @@ Results:
 https://youtube.com/shorts/PYR-_0FZ6-E?feature=share
 
 When the test signal was sent the motor activated autonomously and stopped when the timing piece was in line with the prox sensor. Furhter testing and tuning (such as moving the timing piece slightly) may need to be done to ensure the design works properly once we are able to have the load from the remaining pieces from the firing mechanism mounted to the rest of the design, hence changing the load put upon the motor once the ME team has completed that piece. 
-
-[def1]: https://youtu.be/kAdy6xZ5rTo
-
-
-
-
-
