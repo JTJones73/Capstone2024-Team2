@@ -87,6 +87,7 @@ With the results from this test shown in the table below it has been confirmed t
 To verify that constraints 1 and 3 are met by the system, the Velocity and Acceleration sensor will be powered by a 3.7V LiPo battery and will be set up and have the same placement as in the previous test. To ensure the system is capable of operating without outside intervention and running on battery power the following test will be conducted. After the sensor is set up as previously described a ball will be dropped on line 1 to verify that the sensor will turn to the line to obtain the distance and time measurements and transmit this information to the interceptor. This will prove that the system is capable of operating without outside interaction and running on battery power.
 
 Expected Results: 
+
 Given that the networking subsystem has been proven to be working in the Projectile Path Sensor, and constraint 7 has been confirmed when the networking is integrated into the velocity and acceleration it is expected that the system will be able to confirmed that the system is autonomous and able to run on batteery power.
 ### Head on Sensor
 10. The interceptor shall be able to detect and locate targets head on.
